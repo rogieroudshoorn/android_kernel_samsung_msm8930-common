@@ -13,7 +13,6 @@
 #include <linux/pid_namespace.h>
 #include "internal.h"
 
-
 static const struct proc_ns_operations *ns_entries[] = {
 #ifdef CONFIG_NET_NS
 	&netns_operations,
@@ -24,9 +23,9 @@ static const struct proc_ns_operations *ns_entries[] = {
 #ifdef CONFIG_IPC_NS
 	&ipcns_operations,
 #endif
-#ifdef CONFIG_PID_NS
+/*#ifdef CONFIG_PID_NS
 	&pidns_operations,
-#endif
+#endif */
 	&mntns_operations,
 };
 
